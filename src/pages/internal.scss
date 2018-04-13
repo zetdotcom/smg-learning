@@ -1,0 +1,119 @@
+@import '../styles/variables.scss';
+
+.internal {
+  /* ------------ HEADER section ------ */
+
+  header {
+    &.internal {
+      background: linear-gradient($blueOpacity, $blueOpacity);
+      background-size: cover;
+      // background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .light-blue-container {
+      position: absolute;
+      width: 450px;
+      bottom: -190px;
+      right: 250px;
+      z-index: 999;
+      .david-call {
+        font-size: 1.65rem;
+        word-spacing: 3px;
+        line-height: 1.3;
+        width: 320px;
+      }
+      .text {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  /* ------------ WHAT WE OFFER section ------ */
+
+  .offer-section {
+    a,
+    a:link,
+    a:visited {
+      color: $pink;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .what-we-offer {
+      width: 510px;
+    }
+  }
+
+  /* ------------ WHY CHOOSE US? section ------ */
+
+  .choose-us-section {
+    background: $lightGrey;
+
+    .choose-us-desc {
+      display: flex;
+      // justify-content: space-around;
+    }
+    .col {
+      display: flex;
+      width: 40%;
+      flex-flow: column;
+      &:first-child {
+        margin-right: 150px;
+      }
+    }
+    h6 {
+      color: $pink;
+      margin-bottom: 15px;
+    }
+
+    // ------TESTIMONIES
+
+    .blue-container {
+      .container {
+        width: 50%;
+      }
+      .testimonies {
+        display: flex;
+      }
+
+      .testimony-desc {
+        width: 250px;
+        padding-right: 50px;
+      }
+
+      .testimony-img {
+        img {
+          max-width: 45px;
+        }
+      }
+    }
+  }
+
+  // --------OFFER 2 section
+  .offer2-section {
+    padding: 30px 0 0;
+    margin-bottom: -230px;
+  }
+  .offer2-levels {
+    display: flex;
+    justify-content: space-between;
+    .level {
+      width: 30%;
+
+      div:first-child {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid $green;
+        margin: 15px 0;
+
+        // background: green;
+      }
+    }
+  }
+}

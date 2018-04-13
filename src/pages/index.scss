@@ -1,0 +1,371 @@
+@import '../styles/variables.scss';
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+a,
+a:link,
+a:active {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.btn {
+  margin: 20px 0;
+
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-full {
+  background: $pink;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.1s;
+}
+
+.btn-empty {
+  background: transparent;
+  color: $pink;
+  border: 3px solid $pink;
+  &:focus {
+    outline: none;
+  }
+}
+p {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+h3 {
+  color: $green;
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+
+h4 {
+  color: $pink;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+h5 {
+  color: $blue;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+h6 {
+  color: $blue;
+  font-weight: bold;
+  letter-spacing: 0.8 px;
+  font-size: 1rem;
+}
+
+section {
+  // margin-top: 65px;
+  margin-bottom: 65px;
+  padding: 75px 0 0;
+}
+
+/* ------------- HEADER ----------*/
+
+header {
+  // overflow: hidden;
+  position: relative;
+
+  &.home-header {
+    background: url('../images/header-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover {
+    background: linear-gradient($blueOpacity, $blueOpacity);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.9;
+    z-index: 1;
+  }
+
+  .banner {
+    width: 100%;
+    min-height: 680px;
+    height: 80vh;
+    position: absolute;
+    z-index: -10;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  // background-color: $blueOpacity;
+  background: linear-gradient($blueOpacity, $blueOpacity);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 680px;
+  height: 80vh;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: $white;
+  nav {
+    display: flex;
+    padding: 25px 0;
+  }
+  .links {
+    display: flex;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    justify-content: flex-end;
+    flex: 1;
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+    li {
+      padding: 0 13px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      &::after {
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: transparent;
+        content: ' ';
+        margin: 0 auto;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        &::after {
+          background-color: $pink;
+        }
+      }
+
+      span {
+        border: 1px solid $pink;
+        border-radius: 5px;
+        padding: 5px 6px 7px;
+      }
+    }
+  }
+  .about {
+    position: relative;
+    width: 400px;
+    left: 150px;
+    top: 15%;
+    font-size: 0.95rem;
+  }
+}
+
+/* ------------- WHY CHOOSE US ? section ------ */
+
+.choose-us-list {
+  display: flex;
+  flex-flow: row wrap;
+  .choose {
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 15px;
+    p {
+      width: 70%;
+    }
+  }
+  .choose-img {
+    flex: 1;
+  }
+  .choose-desc {
+    flex: 3;
+  }
+}
+
+/*----------------- CASE STUDIES section -----*/
+.case-studies-section {
+  background: $lightGrey;
+  height: 100%;
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .case {
+    padding: 0 35px;
+    flex: 1;
+  }
+  .btn {
+    margin: 0 0 40px 0;
+  }
+
+  .case-studies-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .case-img {
+    img {
+      width: 70%;
+    }
+  }
+
+  .case-title {
+    color: $pink;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .case-desc {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    width: 145px;
+  }
+}
+
+.blue-container {
+  background: $blue;
+  position: relative;
+  margin: 100px 0 0;
+  &-round {
+    border-radius: 100px;
+    width: 90%;
+    margin: 100px auto 0;
+  }
+  .container {
+    padding: 100px 0;
+    width: 560px;
+  }
+}
+
+.dots {
+  display: flex;
+  width: 30%;
+  margin: 25px auto;
+  justify-content: space-around;
+  div {
+    width: 13px;
+    height: 13px;
+    border: 1px solid $darkGrey;
+    border-radius: 50%;
+    &.active {
+      background: $pink;
+      border: none;
+    }
+  }
+}
+
+.light-blue-container {
+  background: $lightBlue;
+  position: absolute;
+  display: flex;
+  bottom: -50px;
+  right: 250px;
+  z-index: 15;
+  justify-content: space-around;
+  align-self: baseline;
+  color: $white;
+  height: auto;
+  padding: 20px 30px;
+  border-radius: 30px;
+  width: 560px;
+  p {
+    font-size: 0.8rem;
+  }
+  .count {
+    width: 85px;
+    height: 70px;
+    &-no {
+      font-size: 1.7em;
+      margin-bottom: 8px;
+      letter-spacing: 0.8px;
+    }
+  }
+}
+
+/* ------------  CLIENTS LOGOS --------*/
+
+.clients-section {
+  position: relative;
+  margin-bottom: -230px;
+  .blue-container {
+    margin: 60px 0 0;
+    &-round {
+      margin: 60px auto 0;
+    }
+  }
+}
+.clients {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px;
+  padding-bottom: 0;
+  .client-logo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+}
+
+/* --------------- FOOTER ------------ */
+footer {
+  background: $lightGrey;
+  padding-top: 350px;
+  padding-bottom: 50px;
+  color: $darkGrey;
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-call {
+    max-width: 150px;
+    top: 20px;
+    position: relative;
+    height: 100%;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  .founders {
+    color: $blue;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .founder-name {
+    font-weight: bold;
+    p {
+      margin-bottom: 2px;
+    }
+  }
+
+  .footer-links {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    &:hover {
+      color: rgb(49, 49, 49);
+    }
+  }
+}
